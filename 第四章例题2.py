@@ -45,12 +45,11 @@ def test3():
     # 从键盘输入一个1到10的数，例如5，用循环实现 5*5 * 5*4 *
     i = eval(input("请输入一个数："))
     for x in range(1, i + 1):
-        for y in range(x):
-            print('*', end=' ')
-        print()
+        print('*' * x)
 
 
 # test3()
+
 
 def test4():
     i = eval(input("请输入一个数："))
