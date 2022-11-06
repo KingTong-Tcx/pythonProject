@@ -127,6 +127,31 @@ def test8():
 # test8()
 
 def test9():
+    a = eval(input("请输入一个数："))
+    for i in range(1, a + 1):
+        print(' ' * (a - i), end='')
+        for j in range(1, 2 * i):
+            print(i, end='')
+        print()
+
+
+# test9()
+
+def test10():
+    a = eval(input("请输入一个数："))
+    for i in range(1, a + 1):
+        print(' ' * (a - i), end='')
+        for j in range(1, i + 1):
+            print(j, end='')
+        for j in range(i - 1, 0, -1):
+            print(j, end='')
+        print()
+
+
+# test10()
+
+
+def test11():
     # p52
     a = eval(input("请输入一个数："))
     for i in range(1, a + 1):
@@ -143,4 +168,26 @@ def test9():
         print()
 
 
-test9()
+# test11()
+def test12():
+    # 九九乘法表
+    for i in range(1, 10):
+        for j in range(1, i + 1):
+            print(f'{i}x{j}={i * j}\t', end='')
+        print()
+
+
+# test12()
+
+def test13():
+    a = eval(input("请输入一个数："))
+    for i in range(1, a + 1):
+        for j in range(1, a + 1):
+            if i > j:
+                print(i, end=' ')
+            else:
+                print(j, end=' ')
+        print()
+
+
+test13()
