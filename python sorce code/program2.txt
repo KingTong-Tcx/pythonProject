@@ -1,0 +1,72 @@
+
+lst=list(range(2,21,3))
+i=0
+result=[]
+while i<len(lst):
+    result.append(lst[i]*lst[i])
+    i+=1
+print(result)
+  /////////////////////////////
+
+
+def showmessage(name,*p_info,**scores):
+   print ("姓名: ",name)
+   for e in p_info:
+      print(e,end=" ")
+   for item in scores.items():
+      print(item,end=" ")
+   print()   
+   return
+ 
+#调用showmessage函数
+showmessage("Kate","male",18,"Dalian");
+print("------------------------------")
+showmessage("Kate","male",18,"Dalian",Math=86,PE=92,Eng=88);
+///////////////////////////////////////////////////////////////////
+def compare( arg1, arg2 ):
+   "比较两个参数的大小"
+   result = arg1 >arg2
+   print ("函数内 : ",result)
+   return result;
+#调用函数
+b1 = compare(10,9.99)
+print ("函数外 : ",b1)
+   
+///////////////////////
+def func1(x,y):
+    x1=x
+    y1=y
+    z=100
+    func2()
+    print("in func1(),z=",z)
+    return
+
+def func2():
+    x1=10
+    y1=20
+    z=0
+    print("in func2(),z=",z)
+
+	
+func1('a','b')
+////////////////////////////////////
+list=['aaa','bbbb','cc','dd']
+print("enter:")
+while True:
+       n=int(input());
+       try:
+              print(list[n]);
+       except IndexError as e:
+              print("!!!!")
+       else:
+              break
+       
+ /////////////////////////
+def fib(n):
+    a,b = 1,1
+    while (b<n):
+        a,b=b,a+b
+    else:
+        return b
+
+print(fib(30))

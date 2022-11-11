@@ -1,0 +1,1057 @@
+#hello3.py
+def hello3():
+    print("Hello.python!")
+
+
+if __name__=='__main__':
+    hello3()
+
+
+////////////////////////////////
+
+def func(num):
+    num+=1
+    print(num)
+    print(id(num))
+
+a=10
+func(a)
+print(id(a),a)
+////////////////////////////////////////
+'''
+用*号输出金字塔形状
+
+'''
+
+n=eval(input("请输入打印的行数： "))
+for i in range(1,n+1):
+    print(' '*(n-i)+'*'*(2*i-1))
+#######################################
+n=eval(input("请输入打印的行数： "))
+
+i=j=1
+while(j<=n):
+    #print(' '*(n-j),end="")
+    for item in range(i,i+j):
+        print(item,end="")
+    i=i+j
+    j +=1
+    print()
+#######################################
+
+n=eval(input("请输入打印的行数： "))
+for x in range(1,n+1):
+    print(' '*(10-x),end="")
+    n=x
+    while n>=1:
+        print(n,sep="",end="")
+        n-=1
+   
+    n=2
+    while n<=x:
+        print(n,sep="",end="")
+        n+=1
+    print()
+    
+/////////////////////////
+flag=1
+books=8
+payaccount=234
+actualpay=0
+
+if flag==1:
+    if books>=5:
+        actualpay=payaccount*0.75
+    else:
+        actualpay=payaccount*0.85
+else:
+    if books>=5:
+        actualpay=payaccount*0.85
+    else:
+        actualpay=payaccount*0.95
+
+           
+print("您的实际付款金额是： ",actualpay)
+////////////////////////////////////////////////////
+from tkinter import *;
+
+win = Tk();
+lb = Listbox(win);
+for item in['beijing','Tianjin','Shai']:
+       lb.insert(END,item);
+
+#lb.pack();
+lb.pack(expand='yes',fill='both');
+         
+win.mainloop();
+
+//////////////////////////////////////////////////////
+
+filename=input("请输入要添加行号的文件名：")
+filename2=input("请输入新生成的文件名：")
+sourcefile=open(filename,'r',encoding="utf-8")
+targetfile=open(filename2,'w')
+for (num,value) in enumerate(sourcefile):
+    str1=str(num+1)+"   "+value
+    targetfile.write(str1)
+    
+
+sourcefile.close()
+
+targetfile.close()
+///////////////////////////////////
+from tkinter import *;
+win = Tk();
+val = StringVar();
+
+
+win.title('main');
+list1 = Listbox(win,listvariable=val);
+for item in ['aaa','bbb','bbbbcc']:
+       list1.insert(END,item);
+list1.pack()
+
+def callButton():
+       #print(val.get())
+       index=list1.curselection()
+       print(index[0])
+       print(list1.get(index[0]))
+
+
+b=Button(win,text="get",command=callButton,width=50);
+b.pack();
+
+win.mainloop();
+/////////////////////////////////
+
+from datetime import datetime
+filename=input("请输入日志文件名：")
+
+file=open(filename,'a')
+print("请输入日志，exit结束")
+s=input("log:")
+while s.lower()!="exit":
+    file.write("\n"+s)
+    
+    file.write("\n----------------------\n")
+    file.flush()
+    s=input("log:")
+file.write("\n====="+str(datetime.now())+"=====\n")
+file.close()
+//////////////////////////
+
+import math;
+import random;
+import fractions;
+
+
+#x=fractions.Fraction(3,8);
+# print(x);
+# print(x*2);
+
+
+#print(random.random());
+#print(random.choice("abc123%$#@"));print(random.choice("abc123%$#@"));
+#print(random.choice("abc123%$#@"));
+
+list=['aa','b','21','-89','*'];
+print(random.sample(list,4));
+
+import time;
+
+
+print(time.time());
+print(time.localtime(time.time()));
+print(time.strftime('%Y %m %d',time.localtime(time.time())));
+print(time.ctime());
+
+#print(math.ceil(-4.5));
+#print(math.fabs(-34));
+
+
+#print(abs(-34));
+#print(math.trunc(-34.333));
+//////////////////////////////
+
+#m7
+if __name__=='__main__':
+    def show():
+        print("独立运行")
+
+
+    show()
+    import sys
+    print(sys.argv)
+else:
+     def show():
+        print("非独立运行")
+
+print("over")
+//////////////////////////
+n=int(input("input n(3,5,7,9...):"))  
+#生成魔阵  
+row,col=0,n//2  
+magic=[]  
+for i in range(n):  
+    magic.append([0]*n)  
+magic[row][col]=1  
+for i in range(2,n*n+1):  
+    r,l=(row-1+n)%n,(col+1)%n      
+    if(magic[r][l]==0):row,col=r,l         
+    else: row=(row+1)%n  
+    magic[row][col]=i    
+#输出  
+t=len(str(n*n))  #计算n*n的位数  
+for i in magic:  
+    for j in i:  
+        print("%-*d" % (t,j),end="  ") #左对齐，占位是t  
+    print("")  
+///////////////////////////////////////////////
+month=eval(input("请输入您选择的月份： "))
+days = 0;
+
+if (month ==1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12):
+    days = 31
+elif(month == 4 or month == 6 or month == 9 or month == 11):
+    days = 30
+else:
+    days=28
+
+print("{} 月份的天数为 {}".format(month,days))
+
+///////////////////////////////////////////
+strMonth="JanFebMarAprMayJulJunAugSetOctNovDec";
+i= eval(input("Input month :"));
+print(strMonth[(i-1)*3:(i-1)*3+3]);
+
+
+
+////////////////////////////////
+class Person:
+       def __init__(self,name,age):
+              self.name=name
+              self.age=age
+
+       def __del__(self):
+              print('-----del-----')
+
+
+laowang=Person("wang",20)              
+
+//////////////////////////////
+def prime100():
+    print(2,end="  ")
+    for i in range(3,100):
+        for n in range(2,i//2+1):
+            if i%n==0:
+                break
+        else:  
+            print(i,end='  ')
+    else:
+        print(-999999)
+
+if __name__=='__main__':
+    prime100()
+        
+////////////////////////////////////////////////////
+def payOut(aa):
+    if (aa>5000):
+        raise ValueError("out of bounds!")
+    else:
+        return aa-100
+
+pay=payOut(4000)
+print(pay)
+
+pay=payOut(5200)
+print(pay)
+///////////////////////////////////
+##x=[1,2]
+##try:
+##    print(x[2])
+##    #raise IndexError
+##except IndexError:
+##    print("出现异常")
+##    
+raise
+##
+
+try:
+    try:
+        raise IOError
+    except IOError:
+        print("inner exception")
+        raise # <same as raise IOError>
+except IOError:
+    print("outter exception")
+/////////////////////////////////////
+try:
+    try:
+        raise IOError
+    except IOError:
+        print("inner exception")
+        raise # <same as raise IOError>
+except IOError:
+    print("outter exception")
+////////////////////////////////////////////
+def processLine(line,wordCounts):
+
+    words = line.split();
+    for word in words:
+        if word in words:
+            wordCounts[word]+=1;
+        else:
+            wordCounts[word]=1;
+    wcs={};
+
+    processLine("Hello,every one,Hello,kity",wcs);
+    print(wordCouts);
+
+
+def replaceChar(line):
+    for ch in line:
+        if ch in "@#$%&*+=-":
+            line = line.replace(ch,"");
+    return line;
+////////////////////////////////////////
+
+tuple1=(12,23,-89.1,"sh");
+for i in range(len(tuple1)):
+    print(tuple1[i]);
+
+
+list1=["BJ","SH","TJ","DL"];
+for i in range(len(list1)):
+    print(list1[i]);
+print('---------------------------------');
+
+list2=["NJ"];
+list1.append(list2);
+print(list1);
+list1.sort();
+print('---------------------------------');
+list3=[12,23,-98.3,32];
+list3.sort();
+
+
+print(list3);
+
+print('---------------------------------');
+dictionary1={"id":1,"name":"rose",'sex':'female'};
+print(dictionary1);
+print(len(dictionary1));
+////////////////////////////////////////////
+
+from datetime import date,datetime
+import pickle
+
+def savedata():
+'''
+使用字典保存模块名称，创建时间和模块功能信息，
+使用列表保存多个模块信息
+
+
+'''
+    modules=[]
+    
+    m1={"name":"登录注册","描述":'使用字典保存模块名称，创建时间和模块功能信息'}
+    m2={"name":"订单管理","日期":date(2017,10,12),"描述":'订单管理模块实现的是订单数据的输入、追加、修改和删除等功能'}
+    m3={"name":"客户管理","日期":datetime.now(),"描述":'使用字典保存模块名称，创建时间和模块功能信息'}     
+
+    modules.append(m1)
+    modules.append(m2)
+    modules.append(m3)
+///////////////////////////////////////
+from datetime import date,datetime
+import pickle
+def savedata():
+    '''
+    使用字典保存模块名称，创建时间和模块功能信息
+    使用列表保存多个模块信息
+    '''
+
+
+    
+    modules=[]
+    m1={"name":"登录注册","描述":'使用字典保存模块名称，创建时间和模块功能信息'}
+    m2={"name":"订单管理","日期":date(2017,10,12),"描述":'订单管理模块实现的是订单数据的输入、追加、修改和删除等功能'}
+    m3={"name":"客户管理","日期":datetime.now(),"描述":'使用字典保存模块名称，创建时间和模块功能信息'}     
+
+    modules.append(m1)
+    modules.append(m2)
+    modules.append(m3)
+
+    file=open("minfo.data","ab")
+    #file.write(m1)
+    pickle.dump(modules,file)
+    file.close()
+
+    file=open("minfo.data","rb")
+    #file.write(m1)
+    lst1=pickle.load(file)
+    for item in lst1:
+        print(item)
+    file.close()
+
+savedata()
+//////////////////////////////////////////   
+import requests
+from bs4 import BeautifulSoup
+
+url="http://python123.io/ws/demo.html"
+r=requests.get(url)
+demo = r.text
+soup=BeautifulSoup(demo,"html.parser")
+
+#print(soup.prettify())
+print(soup.a)
+//////////////////////////////////////////
+import requests
+
+url="http://lnedu.lnnu.edu.cn"
+
+try:
+       r = requests.get(url)
+       #r.status_code
+       r.encoding=r.apparent_encoding
+       print(r.text[-1000:])
+except:
+       print("error")
+//////////////////////////
+import requests
+import os
+
+url="http://image.nationalgeographic.com.cn/2018/0105/20180105055402144.jpg"
+
+root="d://pics//"
+
+path=root+url.split('/')[-1]
+
+try:
+       if not os.path.exists(root):
+              os.mkdir(root)
+       if not os.path.exists(path):
+              r=requests.get(url)
+              with open(path,"wb") as f:
+                     f.write(r.content)
+                     f.close();
+                     print("success")
+       else:
+              print("File is already exists")
+except:
+       print("error")
+//////////////////////////////////////////////////
+import requests
+
+url="https://www.so.com/s"
+keyword = "user-agent设置"
+
+try:
+       kv={'q':keyword}
+       r = requests.get(url,params=kv)
+       r.encoding=r.apparent_encoding
+       #r.status_code
+       print(r.request.url)
+       r.raise_for_status()
+       
+       r.encoding=r.apparent_encoding
+       print(len(r.text))
+except:
+       print("error")
+////////////////////////////////////////////////////
+k=eval(input("请输入计算阶乘的数值： "))
+sum1 = 0
+i=1
+while i<=k:
+    t=j=1
+    while j<=i:
+        t*=j
+        j+=1
+    
+    sum1+=t
+    i+=1
+
+print(sum1)
+/////////////////////////////////////////////
+#在分支语句中观察缩进
+score = 54
+scoreline = 60
+if score>scoreline:
+    gpoint = 1+(score-scoreline)/10
+    print("学分绩点为",gpoint)
+    print("通过考试")
+else:
+    print("学分绩点为0")
+    print("未通过考试")
+////////////////////////////////////////
+list=[11,22,33]
+
+for i,v in enumerate(list):
+       print("No.{} elements is {}".format(i+1,v))
+
+No.1 elements is 11
+No.2 elements is 22
+No.3 elements is 33
+////////////////////////////
+def getNumbers():
+    data=input("data:")
+    data=data.split(',')
+    ls=[]
+    for i in data:
+        ls.append(eval(i))
+    return ls
+
+def getMedium(ls):
+    len1=len(ls)
+    if len1//2==len1/2:
+        medium=(ls[len1//2]+ls[len1//2-1])/2
+    else:
+        medium=(ls[len1//2])
+    return medium
+
+def getAverage(ls):
+    import math
+    average=math.fsum(ls)/len(ls)
+    return (average)
+
+def getDev(ls):
+    pass
+
+
+lst = getNumbers()
+print(getMedium(lst))
+print(getAverage(lst))
+print(getDev(lst))
+
+    
+
+///////////////////////////////////////
+def addlist(alist):
+       for i in alist:
+              yield i*i
+
+
+alist=[1,-3,2,2.2,-3]
+for x in addlist(alist):
+       print(x)
+/////////////////////////
+def addlist(alist):
+       for i in alist:
+              yield i*i
+
+
+alist=[1,-3,2,2.2,-3]
+for x in addlist(alist):
+       print(x)
+///////////////////////////////////
+##i = 3;
+##j = 0;
+##k=3.2;
+##if(i < k):
+##    if( i== j):
+##        print(i)
+##    else:
+##        print(j)
+##else:
+##    print(k)
+
+
+##x=0
+##while x<10:
+##    x+=1
+##    print(x)
+##    if x>3:
+##        break
+	
+
+
+
+a=17
+b=6; 
+result=a%b if(a%b>4) else a/b 
+print(result)
+
+##
+
+##for i in range(4):
+##    if i==3:
+##        break
+##    print(i)
+##print(i)
+//////////////////////////////////
+#from tkinter.messagebox import *;
+#showinfo(title='message',message='welcome');
+
+from tkinter.messagebox import *;
+
+#showwarning(title='warn!!!',message='Enter password');
+#showerror(title="error",message="PWD error!");
+answer = askquestion(title='PLease answer',message="are you right?");
+if answer==YES:
+       showinfo(title='answer',message='correct');
+else:
+        showinfo(title='answer',message='ERROR');
+/////////////////////////////
+from tkinter.messagebox import *;
+response = askokcancel(title='Test',message="are you continue?");
+if response==True:
+       showinfo(title='Test',message='continue')
+else:
+       showinfo(title='Test',message='end')
+
+//////////////////////////////////
+class UDFException(Exception):
+       def __init__(self,length,width):
+              self.length=length
+              self.width=width
+
+
+try:
+       len1=input("enter length:")
+       width1=input("enfter width:")
+       
+       if len(len1)<len(width1):
+              raise UDFException(len(len1),len(width1))
+except UDFException as result:
+       print("User defined Exception: length is %d,length must greater than width ,\
+             width is %d" %(result.length,result.width))
+else:
+       print(0)
+
+       /////////////////////////////////////////////////////
+
+s,idx="wel%12comz",0
+'''
+while idx<len(s):
+    n=ord(s[idx])
+    print(chr(n+1))
+    idx+=1
+'''
+
+for c in s:
+    if c.isnumeric():
+    
+       continue
+    print(chr(ord(c)+1))
+//////////////////////////////////////////yanghui
+x=[]
+n=10
+for i in range(1,n+1):
+       x.append([1]*i)
+       '''
+for i in range(n):
+       print(x[i])
+   
+'''
+for i in range(1,n+1):
+       print(x[i-1])
+    
+for i in range(2,n):
+       for j in range(1,i):
+              x[i][j]= x[i-1][j-1]+ x[i-1][j]
+              print(x[i][j],end="  ")
+       print()
+
+        
+
+for i in range(n):
+       for j in range(i+1):
+              print(x[i][j],end=" ")
+       print()
+
+////////////////////////////////////////
+a = 100;
+def setNumber():
+    a=2;
+    print(a);
+
+setNumber();
+print(a);
+//////////////////////////
+dict={'a':'apple','g':'google','d':'dog','f':'foot'};
+
+
+def func1(adict):
+    for(k,v) in adict.items():
+        #print(k,v);
+        #print "%s =" % k,v;
+        print("dict[%s] ="    %k,v);
+
+print(dict);
+func1(dict);
+///////////////////////////////////
+def func1(adict):
+    adict['a']='xxxx';
+
+dict={'b':'boolean',"a":'about','x':"xor"};
+
+print(dict);
+func1(dict);
+print(dict);
+
+
+def funct2(b,a=1,c=2):
+    d=a+b+c;
+    print(d);
+
+funct2(100,200);
+//////////////////////////////////////////////
+#print(abs(-3.22));
+#print(divmod(-45,6));
+
+str1="HelloWorld";
+#print(str1.lower());
+#print(str1.upper());
+#print(str1.swapcase());
+#print(str1.capitalize());
+
+#print(str1.ljust(30,'*'));
+#print(str1.ljust(30,'*'));
+#print(str1.center(30,'*'));
+
+printf(str1.index('o'));
+print(str1.find('wor'));
+print(str1.rfind('l'));
+print(str1.rfind('o'));
+/////////////////////////
+str1='Hello World Python';
+list1 = str1.split(" ");
+print(list1);
+
+str2='Hello World\nPython';
+list2 = str2.splitlines();
+print(list2);
+//////////////////////////////////
+with open("lib/fib.py") as f:
+       data = f.read()
+       print(data)
+////////////////////////////////////////
+   
+fname="d:\\pythonfile\\aaaa.txt"
+with open(fname) as file:
+    for line in file:
+        print(line,end="")
+ /////////////////////////////////////////
+file = open('testb2.txt','w');
+print(file.tell());
+file.write('hello');
+print(file.tell());
+0  5
+////////////////////////
+
+fname=input('Input file name: ');
+filewrite = open(fname,'w');
+str1 = input('Input file content: ');
+filewrite.write(str1);
+
+
+filewrite.close();
+file2 = open(fname,'a');
+file2.write("content to be append"
+);
+file2.close();
+///////////////////////////
+from functools import reduce;
+
+def myadd(x,y):
+       return x+y;
+
+sum1= reduce(myadd,[2,3,4.4,32,-98]);
+print(sum1);
+
+sum2= reduce(myadd,(2,3,4.4,32,-98));
+print(sum2);
+
+x1=(1,3,3,4);
+y1 = (2,3,3,2,2);
+
+zipped = zip(x1,y1);
+print(zipped);
+for ee in zipped:
+       print(ee);
+/////////////////////////////////
+from tkinter import *;
+
+win=Tk();
+val = StringVar();
+
+def callbutton():
+    pass
+       
+print(1);
+///////////////////////////////////
+def func_lib():
+       def add(x,y):
+              return x+y;
+       return add;
+
+fadd=func_lib();
+print(fadd(1,2));
+
+
+##################
+def fact(n):
+       if n==0:
+              return 1;
+       else:
+              return n*fact(n-1);
+
+print(fact(6));
+##############
+
+list=[11,222,3,44,55];
+it=iter(list);
+print(next(it));
+print(next(it));print(next(it));print(next(it));
+print(next(it));
+
+############
+list=[11,222,3,44,55];
+for i,v in enumerate(list):
+       print('No.%d element,value is %s' %(i+1,v));
+///////////////////////////////////////////////
+list1 =[-8,3,78,999,-8.22,9];
+sum = 0;
+
+for i in range(len(list1)):
+       if list1[i]>=0:
+              sum+=list1[i];
+
+print(sum);
+
+
+####################
+
+from functools import reduce;
+list1 =[-8,3,78,999,-8.22,9];
+sum1=filter((lambda aa:aa>0),list1);
+
+s = reduce((lambda x,y:x+y),sum1);
+print(s);
+///////////////////////////////////////
+def math(op):
+       if(op==1):
+              return lambda x,y:x+y;
+       if(op==2):
+              return lambda a,b:a*b;
+
+action1 = math(1);
+print(action1(12,37));
+
+action2 = math(2);
+print(action2(12,37));
+
+##########################
+
+arr1 = map(lambda x:x**2,[1.2,2.2,3.2,4.2]);
+print(arr1);
+for e2 in enumerate(arr1):
+       print(e2);
+
+
+def is_even(n):
+       return n%2==0;
+
+arr2=filter(is_even,[3,4,6,2.2,-8,90,0]);
+for e2 in enumerate(arr2):
+       print(e2);
+///////////////////////////////////////////////////////
+computing = lambda x,y,z,k:(x+y+z)/k;
+print(computing(1,2,3,4));
+
+import math;
+arr1 = [(lambda x:x**2),(lambda a:a**3),(lambda x:math.sqrt(x))];
+print(arr1[0](2),arr1[1](3),arr1[2](16));
+/////////////////////////////////
+def f1(x):
+       return x**2
+
+r=map(f1,[1,3,5,-3,2])
+
+print(list(r))
+#print(r)
+//////////////////////////////////////////////
+
+def main():
+    f1=input("one File:").strip();
+    f2 =input("two File:").strip();
+    print(f1);
+
+    inFile=open(f1,"r");
+    outFile=open(f2,"w");
+
+    for line in inFile:
+        outFile.write(line);
+
+    print("File Copied");
+    inFile.close();
+    outFile.close();
+
+
+main();
+//////////////////////////
+f=open('ithm.txt','r')
+content=f.read(12)
+print(content)
+print('-'*30)
+content2=f.read()
+print(content2)
+f.close()
+////////////////////////////////////
+f = open("ithm.txt",'w')
+f.write("hello,every one")
+f.write('\n')
+f.write("hello,every one")
+f.write('\n')
+f.write("hello,every one")
+f.close();
+///////////////////////////
+f = open("ithm.txt",'r')
+contents =(f.readlines())
+for line in contents:
+       print(line,end='')
+f.close()
+///////////////////////////////
+
+#file = open("Test.txt");
+#content = file.readlines();
+#file.close();
+#print(content);
+
+
+file = open("file3.py");
+while True:
+       str = file.readline()
+       if not str:
+              break;
+       print(str);
+file.close();
+
+file = open("file3.py");
+for srr in file:
+       print(srr);
+file.close();
+////////////////////////////
+#file = open("Test.txt");
+#str = file.read();
+#file.close();
+#print(str);
+
+
+file = open("file2.py");
+
+while True:
+       str1 = file.read(15);
+       if not str1:
+              break;
+       print(str1);
+
+file.close();
+////////////////////////////////////
+#name=input("enter a name  ");
+#print("Hello,%s" %name);
+
+Mname="xiaoming";
+Yname="zhang";
+print("Hello!,You are %s ,I am %s" %(Mname,Yname));
+
+str1='hello world!';
+print("The length of %s is %d" %(str1,len(str1)));
+/////////////////////////////////////////////////
+def fib1(n):
+       a,b=0,1
+       while b<n:
+              print(b,end="  ")
+              a,b=b,a+b
+       print()
+
+
+def fib2(n):
+       results=[]
+       a,b=0,1
+       while b<n:
+              results.append(b)
+              #print(b,end="")
+              a,b=b,a+b
+       return results
+# this is a test
+if __name__=='__main__':
+       fib1(9)
+       ret=fib2(7)
+       print("in this module,the result is",ret)
+//////////////////////////////////////////////////////
+def add(x,y,f):
+    return f(x)+f(y)
+
+print(add(-67,23.2,abs))
+/////////////////////////////////////
+
+def showmessage(name,*args):
+   print ("姓名: ",name)
+   for e in args:
+      print(e,end=",")
+   return
+ 
+#调用showmessage函数
+showmessage("Kate" )
+print ("------------------------")
+showmessage("Kate","male",18,"Dalian");
+//////////////////////////////////////////////
+class Person:
+    id="01"
+    def display():
+        pass
+
+p1=Person()
+print(p1.id)
+p1.name="Rose"
+print(p1.name)
+print(p1.email)
+//////////////////////////////////////
+import b;
+b.spam("gumy");
+.....b.py
+def spam(text):
+       print(text,'spam');
+       ////////////////////////////////////
+a=100
+def setNumber():
+	a=10
+	b=10
+	a+=b
+	print(a)
+
+setNumber()
+print(a)
+/////////////////////////////
+list1 = [1,42,3,-7,8,9,-10,5]
+#二分查找要求查找的序列时有序的，假设是升序列表
+list1.sort()
+print(list1)
+
+find=eval(input("请输入要查看的数据："))
+
+low = 0
+high = len(list1)-1
+flag=False
+while low <= high :
+    mid = int((low + high) / 2)
+    
+    if list1[mid] == find :
+        #print("您查找的数据{},是第{}个元素".format(find,mid+1))
+        flag=True
+        break
+      #return mid
+    #左半边
+    elif list1[mid] > find :
+        high = mid -1
+    #右半边
+    else :
+        low = mid + 1
+        
+if flag==True:
+    print("您查找的数据{},是第{}个元素".format(find,mid+1))
+else:
+    print("没有您要查找的数据")
+
+///////////////////////////////////
