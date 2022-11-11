@@ -1,6 +1,7 @@
 def problem():
     raise NameError
 
+
 def method1():
     try:
         print("a")
@@ -12,7 +13,6 @@ def method1():
     finally:
         print("d")
     print("e")
-    
-method1()
 
-        
+
+method1()

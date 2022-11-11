@@ -1,22 +1,35 @@
-1   # program0718.py
-2   # Ê¹ÓÃÄÚÖÃcsvÄ£¿éÐ´ÈëºÍ¶ÁÈ¡¶þÎ¬Êý¾Ý
-3   datas = [['Name', 'DEP', 'Eng','Math', 'Chinese'],
-4   ['Rose', '·¨Ñ§', 89, 78, 65],
-5   ['Mike', 'ÀúÊ·', 56,'', 44],
-6   ['John', 'ÊýÑ§', 45, 65, 67]
-7   ]
-8   import csv
-9   filename = 'bsheet.csv'
-10   str1=''
-11   with open(filename,'r') as f:
-12       reader = csv.reader(f)
-13       #print(reader)
-14       for row in reader:
-15           for item in row:
-16               str1+=item+'\t'
-17           str1+='\n'
-18           print(reader.line_num, row)    # ÐÐºÅ´Ó1¿ªÊ¼
-19       print(str1)    
-20   
-21   
-22   
+1  # program0718.py
+2  # Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½csvÄ£ï¿½ï¿½Ð´ï¿½ï¿½Í¶ï¿½È¡ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
+3
+datas = [['Name', 'DEP', 'Eng', 'Math', 'Chinese'],
+         4['Rose', 'ï¿½ï¿½Ñ§', 89, 78, 65],
+         5['Mike', 'ï¿½ï¿½Ê·', 56, '', 44],
+         6['John', 'ï¿½ï¿½Ñ§', 45, 65, 67]
+         7]
+8
+import csv
+
+9
+filename = 'bsheet.csv'
+10
+str1 = ''
+11
+with open(filename, 'r') as f:
+    12
+reader = csv.reader(f)
+13  # print(reader)
+14
+for row in reader:
+    15
+for item in row:
+    16
+str1 += item + '\t'
+17
+str1 += '\n'
+18
+print(reader.line_num, row)  # ï¿½ÐºÅ´ï¿½1ï¿½ï¿½Ê¼
+19
+print(str1)
+20
+21
+22

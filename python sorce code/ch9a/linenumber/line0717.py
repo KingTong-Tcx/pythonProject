@@ -1,28 +1,43 @@
-1   # program0717.py
-2   # Ê¹ÓÃÄÚÖÃcsvÄ£¿éÐ´ÈëºÍ¶ÁÈ¡¶þÎ¬Êý¾Ý
-3   
-4   datas = [['Name', 'DEP', 'Eng','Math', 'Chinese'],
-5   ['Rose', '·¨Ñ§', 89, 78, 65],
-6   ['Mike', 'ÀúÊ·', 56,'', 44],
-7   ['John', 'ÊýÑ§', 45, 65, 67]
-8   ]
-9   
-10   import csv
-11   filename = 'bsheet.csv'
-12   with open(filename, 'w',newline="") as f:
-13       writer = csv.writer(f)
-14       for row in datas:
-15           writer.writerow(row)   
-16   
-17   ls=[]
-18   with open(filename,'r') as f:
-19       reader = csv.reader(f)
-20       #print(reader)
-21       for row in reader:
-22           print(reader.line_num, row)    # ÐÐºÅ´Ó1¿ªÊ¼
-23           ls.append(row)
-24       print(ls)
-25           
-26   
-27   
-28   
+1  # program0717.py
+2  # Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½csvÄ£ï¿½ï¿½Ð´ï¿½ï¿½Í¶ï¿½È¡ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
+3
+4
+datas = [['Name', 'DEP', 'Eng', 'Math', 'Chinese'],
+         5['Rose', 'ï¿½ï¿½Ñ§', 89, 78, 65],
+         6['Mike', 'ï¿½ï¿½Ê·', 56, '', 44],
+         7['John', 'ï¿½ï¿½Ñ§', 45, 65, 67]
+         8]
+9
+10
+import csv
+
+11
+filename = 'bsheet.csv'
+12
+with open(filename, 'w', newline="") as f:
+    13
+writer = csv.writer(f)
+14
+for row in datas:
+    15
+writer.writerow(row)
+16
+17
+ls = []
+18
+with open(filename, 'r') as f:
+    19
+reader = csv.reader(f)
+20  # print(reader)
+21
+for row in reader:
+    22
+print(reader.line_num, row)  # ï¿½ÐºÅ´ï¿½1ï¿½ï¿½Ê¼
+23
+ls.append(row)
+24
+print(ls)
+25
+26
+27
+28

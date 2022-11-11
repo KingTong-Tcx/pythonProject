@@ -1,21 +1,34 @@
-1   # program0105.py
-2   '''
-3   ÊäÈëÈý½ÇÐÎÈýÌõ±ß£¬ÓÐº£Â×¹«Ê½¼ÆËãÈý½ÇÐÎÃæ»ýs¡£
-4   ÔÚ¶ÔÈý±ß½øÐÐÁËÒì³£´¦Àí»ù´¡ÉÏ£¬ÅÐ¶Ï3±ß·ûºÏÈý½ÇÐÎÌõ¼þ¡£
+1  # program0105.py
+2
+'''
+3   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½ï¿½Ðºï¿½ï¿½×¹ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
+4   ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½Ð¶ï¿½3ï¿½ß·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 5   '''
-6   import math
-7   try:
-8       a=eval(input("ÇëÊäÈëa±ß³¤£º"))
-9       b=eval(input("ÇëÊäÈëb±ß³¤£º"))
-10       c=eval(input("ÇëÊäÈëc±ß³¤£º"))
+6
+import math
+
+7
+try:
+    8
+a = eval(input("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½aï¿½ß³ï¿½ï¿½ï¿½"))
+9
+b = eval(input("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bï¿½ß³ï¿½ï¿½ï¿½"))
+10
+c = eval(input("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cï¿½ß³ï¿½ï¿½ï¿½"))
 11   except NameError:
-12       print("ÇëÊäÈëÕýÊýÊýÖµ")
-13   if a<0 or b<0 or c<0:
-14       print("ÊäÈëÊý¾Ý²»¿ÉÒÔÎª¸ºÊý")
-15   elif a+b<=c or a+c<=b or b+c<=a:
-16        print("²»·ûºÏÁ½±ßÖ®ºÍ´óÓÚµÚÈý±ßÔ­Ôò")
-17   else:   
-18       p = (a + b + c) / 2
-19       s = math.sqrt(p * (p - a) * (p - b) * (p - c))
-20       print("Èý½ÇÐÎµÄÃæ»ýÊÇ{:.2f}".format(s))
- 
+12
+print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ")
+13
+if a < 0 or b < 0 or c < 0:
+    14
+print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½")
+15 elif a + b <= c or a + c <= b or b + c <= a:
+16
+print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½Í´ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½")
+17 else:
+18
+p = (a + b + c) / 2
+19
+s = math.sqrt(p * (p - a) * (p - b) * (p - c))
+20
+print("ï¿½ï¿½ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½{:.2f}".format(s))

@@ -1,12 +1,12 @@
 from urllib import request
 from bs4 import BeautifulSoup
 
-response=request.urlopen("http://localhost/page1.html")
-html=response.read()
-html=html.decode("utf-8")
+response = request.urlopen("http://localhost/page1.html")
+html = response.read()
+html = html.decode("utf-8")
 
-soup=BeautifulSoup(html,"html.parser")
-
+soup = BeautifulSoup(html, "html.parser")
+
 ##print(soup.title)
 ##print(soup.head)
 ##print(soup.h3)
@@ -27,7 +27,7 @@ soup=BeautifulSoup(html,"html.parser")
 ##temp=soup.strong
 ##print(temp.parent.parent)
 
-temp2=soup.h3
+temp2 = soup.h3
 ##print(temp2.next_sibling)
 
 ##for temp in temp2.next_siblings:

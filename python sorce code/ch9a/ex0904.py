@@ -1,8 +1,8 @@
-#program0704.py
-f=open("test.txt", "r")
-str1=f.readline()
+# program0704.py
+f = open("test.txt", "r")
+str1 = f.readline()
 
-while str1!="":   #判断文件是否结束
+while str1 != "":  # 判断文件是否结束
     print(str1)
-    str1=f.readline()
+    str1 = f.readline()
 f.close()

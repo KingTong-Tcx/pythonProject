@@ -1,4 +1,5 @@
 import jieba
+
 combine_dict = {}
 
 for line in open("tyc.txt", "r"):
@@ -8,11 +9,12 @@ for line in open("tyc.txt", "r"):
         combine_dict[seperate_word[i]] = seperate_word[0]
 print(combine_dict)
 
-jieba.suggest_freq("北平城", tune = True)
-seg_list = jieba.lcut("北京是中国的首都，京城的景色非常优美，就像当年的北平城，我爱这故都的一草一木。\n察运行结运行结运行结运行结运行结果，可以看出，")
+jieba.suggest_freq("北平城", tune=True)
+seg_list = jieba.lcut(
+    "北京是中国的首都，京城的景色非常优美，就像当年的北平城，我爱这故都的一草一木。\n察运行结运行结运行结运行结运行结果，可以看出，")
 f = ",".join(seg_list)
 result = open("output.txt", "w")
-#result.write(f.encode("utf-8"))
+# result.write(f.encode("utf-8"))
 result.write(f)
 
 result.close()

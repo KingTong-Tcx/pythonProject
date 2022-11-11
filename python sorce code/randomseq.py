@@ -1,4 +1,5 @@
-import sys,random
-n=int(sys.argv[1])
+import sys, random
+
+n = int(sys.argv[1])
 for i in range(n):
-    print(random.randrange(80,100))
+    print(random.randrange(80, 100))

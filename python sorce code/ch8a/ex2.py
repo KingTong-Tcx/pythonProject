@@ -1,6 +1,6 @@
 import jieba
 
-stopwords = [line.strip() for line in open('stopwords.txt', 'r', encoding='utf-8').readlines()] 
+stopwords = [line.strip() for line in open('stopwords.txt', 'r', encoding='utf-8').readlines()]
 combine_dict = {}
 
 for line in open("tongyici.txt"):
@@ -18,10 +18,10 @@ print(combine_dict)
 ##result.write(f)
 ##result.close()
 
-result = open("output2.txt", "w",encoding='utf-8')
-for line in open("sanguo20.txt", "r",encoding='utf-8'):
+result = open("output2.txt", "w", encoding='utf-8')
+for line in open("sanguo20.txt", "r", encoding='utf-8'):
     line_1 = line.split(",")
-    #print(line_1)
+    # print(line_1)
 
     final_sentence = ""
 
@@ -34,7 +34,7 @@ for line in open("sanguo20.txt", "r",encoding='utf-8'):
     result.write(final_sentence)
 
 result.close()
-   # print('111',final_sentence)
+# print('111',final_sentence)
 '''
 ##################
     words = jieba.lcut(final_sentence)

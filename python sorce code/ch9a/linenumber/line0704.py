@@ -1,8 +1,14 @@
-1   #program0704.py
-2   f=open("test.txt","r")
-3   str1=f.readline()
-4   
-5   while str1!="":   #ÅÐ¶ÏÎÄ¼þÊÇ·ñ½áÊø
-6       print(str1)
-7       str1=f.readline()
-8   f.close()
+1  # program0704.py
+2
+f = open("test.txt", "r")
+3
+str1 = f.readline()
+4
+5
+while str1 != "":  # ï¿½Ð¶ï¿½ï¿½Ä¼ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
+    6
+print(str1)
+7
+str1 = f.readline()
+8
+f.close()

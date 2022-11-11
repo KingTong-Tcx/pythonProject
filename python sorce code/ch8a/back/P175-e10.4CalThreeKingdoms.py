@@ -1,8 +1,9 @@
-#e10.4CalThreeKingdoms.py
+# e10.4CalThreeKingdoms.py
 import jieba
-excludes = {"将军","却说","荆州","二人","不可","不能","如此"}
+
+excludes = {"将军", "却说", "荆州", "二人", "不可", "不能", "如此"}
 txt = open("三国演义.txt", "r", encoding='utf-8').read()
-words  = jieba.lcut(txt)
+words = jieba.lcut(txt)
 counts = {}
 for word in words:
     if len(word) == 1:
@@ -17,11 +18,11 @@ for word in words:
         rword = "曹操"
     else:
         rword = word
-    counts[rword] = counts.get(rword,0) + 1
+    counts[rword] = counts.get(rword, 0) + 1
 for word in excludes:
-    del(counts[word])
+    del (counts[word])
 items = list(counts.items())
-items.sort(key=lambda x:x[1], reverse=True) 
+items.sort(key=lambda x: x[1], reverse=True)
 for i in range(5):
     word, count = items[i]
-    print ("{0:<10}{1:>5}".format(word, count))
+    print("{0:<10}{1:>5}".format(word, count))

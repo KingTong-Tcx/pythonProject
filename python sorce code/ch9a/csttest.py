@@ -1,16 +1,16 @@
 import csv
 
 filename = 'sheet.csv'
-ls=[]
-with open(filename,'r') as f:
+ls = []
+with open(filename, 'r') as f:
     reader = csv.reader(f)
-    #print(reader)
+    # print(reader)
     for row in reader:
         # 行号从1开始
         print(reader.line_num, row)
-        #ls.append(row)
+        # ls.append(row)
     print(ls)
-        
+
 ########################################
 ##import csv
 ##

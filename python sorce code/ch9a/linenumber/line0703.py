@@ -1,7 +1,13 @@
-1   #program0703.py
-2   f=open("test.txt","r")
-3   flist=f.readlines()       # flist是包含文件内容的列表
-4   print(flist)
-5   for line in flist:
-6       print(line)           #使用print(line,end="")将不显示文件中的空行。
-7   f.close()
+1  # program0703.py
+2
+f = open("test.txt", "r")
+3
+flist = f.readlines()  # flist锟角帮拷锟斤拷锟侥硷拷锟斤拷锟捷碉拷锟叫憋拷
+4
+print(flist)
+5
+for line in flist:
+    6
+print(line)  # 使锟斤拷print(line,end="")锟斤拷锟斤拷锟斤拷示锟侥硷拷锟叫的匡拷锟叫★拷
+7
+f.close()

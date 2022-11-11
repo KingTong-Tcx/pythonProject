@@ -1,12 +1,20 @@
-1   # program0716.py
-2   # ÏòCSVÎÄ¼þÖÐÐ´ÈëÒ»Î¬Êý¾Ý²¢¶ÁÈ¡
-3   lst1 = ["name","age","school","address"]
-4   filew= open('asheet.csv','w')
-5   filew.write(",".join(lst1))
-6   filew.close()
-7   
-8   filer= open('asheet.csv','r')
-9   line=filer.read()
-10   print(line)
-11   filer.close()
-12   
+1  # program0716.py
+2  # ï¿½ï¿½CSVï¿½Ä¼ï¿½ï¿½ï¿½Ð´ï¿½ï¿½Ò»Î¬ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½È¡
+3
+lst1 = ["name", "age", "school", "address"]
+4
+filew = open('asheet.csv', 'w')
+5
+filew.write(",".join(lst1))
+6
+filew.close()
+7
+8
+filer = open('asheet.csv', 'r')
+9
+line = filer.read()
+10
+print(line)
+11
+filer.close()
+12

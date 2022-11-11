@@ -7,8 +7,9 @@
 
 import urllib.request
 import urllib
-data =urllib.parse.urlencode({"from":'Beijing',"To":"Shanghai"})
-url="http://www.sohu.com"
-f=urllib.request.urlopen("http://www.sohu.com%s"%data)
+
+data = urllib.parse.urlencode({"from": 'Beijing', "To": "Shanghai"})
+url = "http://www.sohu.com"
+f = urllib.request.urlopen("http://www.sohu.com%s" % data)
 print(f.read(1500))
 f.close()

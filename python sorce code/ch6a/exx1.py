@@ -1,6 +1,10 @@
-s="hello"
+s = "hello"
+
+
 def setstr():
-    s="hi"
-    s+='world'
+    s = "hi"
+    s += 'world'
+
+
 setstr()
 print(s)

@@ -1,5 +1,6 @@
 import turtle as t
-t.setup(260, 260, None,None)
+
+t.setup(260, 260, None, None)
 t.pu()
 t.fd(-60)
 t.pensize(2)
