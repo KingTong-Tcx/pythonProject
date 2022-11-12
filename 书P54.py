@@ -73,3 +73,25 @@ def test5():
 # test5()
 
 # 6、输入一元二次方程的3个系数a、b、c，求ax^2+bx+c=0方程的根
+# !/usr/bin/python
+# -*- coding: utf-8 -*-
+# 当程序存在中文时，注释表明使用utf-8编码解释
+
+
+
+import math
+
+# 计算函数ax^2+bx+c=0的两个解，自定义方法
+def PFG(a, b, c):
+    # math.sqrt() 计算平方根
+    x1 = (-b + (math.sqrt((b ** 2) - 4 * a * c))) / (2 * a)
+    x2 = (-b - (math.sqrt((b ** 2) - 4 * a * c))) / (2 * a)
+    return x1, x2
+
+
+x = eval(input("请输入a，按回车结束输入"))
+y = eval(input("请输入b，按回车结束输入"))
+z = eval(input("请输入c，按回车结束输入"))
+p = PFG(x, y, z)
+print('第一个根是', p[0])
+print('第二个根是', p[1])
