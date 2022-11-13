@@ -2,7 +2,7 @@
 
 def test1():
     # 1、给定某个字符串s，对其中的每一字符c进行大小写转换：如果c是大写字母，则将它转换成小写字母，如果c是小写字母，则将它转换成大写字母，如果不是字母，则不进行转换
-    st_r = input("输入字符串！")
+    st_r = input("输入字符：")
     a = []
     for i in range(len(st_r)):
         if 'a' <= st_r[i] <= 'z':
@@ -31,21 +31,20 @@ def test3():
 
 # test3()
 def test4():
-    global sum
     # 4、一个数如果恰好等于它的因子之和，这个数就称为"完数"。例如，6的因子为1、2、3，而6=1+2+3，因此6就是"完数"。请编程找出100内的所有完数
     # 循环输出1到100之间的数  range():含头不含尾
     for i in range(1, 101):
         # 此时i代表1-100之间所有的数
         # 定义和的初始值
-        sum = 0
+        sum1 = 0
         # 构造数字的因子
         for j in range(1, i):
             #     因子:能被i整除的是i的因子
             if i % j == 0:
                 #     只要是i的因子那么就相加
-                sum += j
+                sum1 += j
         # 如果 因子相加的和  等于i本身那么这个数就是完数
-        if sum == i:
+        if sum1 == i:
             print(f"{i}是完数")
 
 
@@ -72,26 +71,22 @@ def test5():
 
 # test5()
 
-# 6、输入一元二次方程的3个系数a、b、c，求ax^2+bx+c=0方程的根
-# !/usr/bin/python
-# -*- coding: utf-8 -*-
-# 当程序存在中文时，注释表明使用utf-8编码解释
+
+def test6():
+    # 6、输入一元二次方程的3个系数a、b、c，求ax^2+bx+c=0方程的根
+    print("输入一元二次方程的3个系数a、b、c，求ax^2+bx+c=0方程的根")
+    a = eval(input("请输入a:"))
+    b = eval(input("请输入b:"))
+    c = eval(input("请输入c:"))
+    delta = b ** 2 - (4 * a * c)
+    if delta >= 0:
+        x1 = (delta ** 0.5 - b) / 2 * a
+        x2 = (-delta ** 0.5 - b) / 2 * a
+        if x1 == x2:
+            print("有且仅有一个根", x1)
+        print('第一个根是', x1, "第二个根", x2)
+    else:
+        print("该方程无解")
 
 
-
-import math
-
-# 计算函数ax^2+bx+c=0的两个解，自定义方法
-def PFG(a, b, c):
-    # math.sqrt() 计算平方根
-    x1 = (-b + (math.sqrt((b ** 2) - 4 * a * c))) / (2 * a)
-    x2 = (-b - (math.sqrt((b ** 2) - 4 * a * c))) / (2 * a)
-    return x1, x2
-
-
-x = eval(input("请输入a，按回车结束输入"))
-y = eval(input("请输入b，按回车结束输入"))
-z = eval(input("请输入c，按回车结束输入"))
-p = PFG(x, y, z)
-print('第一个根是', p[0])
-print('第二个根是', p[1])
+test6()
