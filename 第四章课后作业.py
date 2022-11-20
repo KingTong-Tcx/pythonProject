@@ -89,4 +89,4 @@ def test6():
         print("该方程无解")
 
 
-test6()
+# test6()
