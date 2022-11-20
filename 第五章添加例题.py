@@ -48,7 +48,7 @@ def book_p69_1():
     # p69-1
     # lst1 = []
     # sum1 = 0
-    str1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+    # str1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     a = ""
     yzm = ""
     for i in range(0, 26):
