@@ -80,11 +80,12 @@ def test6():
     c = eval(input("请输入c:"))
     delta = b ** 2 - (4 * a * c)
     if delta >= 0:
-        x1 = (delta ** 0.5 - b) / 2 * a
-        x2 = (-delta ** 0.5 - b) / 2 * a
+        x1 = - b + (delta ** 0.5) / 2 * a
+        x2 = - b - (delta ** 0.5) / 2 * a
         if x1 == x2:
             print("有且仅有一个根", x1)
-        print('第一个根是', x1, "第二个根", x2)
+        else:
+            print('第一个根是', x1, "第二个根", x2)
     else:
         print("该方程无解")
 
